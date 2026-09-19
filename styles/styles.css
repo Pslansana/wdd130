@@ -1,7 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 main {
 max-width: 840px;
 }
 
+.nav-link{
+    background-color: #0080ff;
+}
+
+.nav-link a{
+    color: #fefe;
+    display: block;
+    padding: 10px;
+}
+
+h1{
+    color: #0080ff;
+}
 aside {
 width: 20rem;
 margin: 1rem;
