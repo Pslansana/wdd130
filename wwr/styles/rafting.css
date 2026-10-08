@@ -1,546 +1,780 @@
 :root {
-    --primary-color: #1f3b6d;
-    --heading-font: "Trebuchet MS", Arial, sans-serif;
-    --body-font: Arial, Helvetica, sans-serif;
+  --primary-color: #1f3b6d;
+  --heading-font: "Trebuchet MS", Arial, sans-serif;
+  --body-font: Arial, Helvetica, sans-serif;
 }
+
 
 /* Universal selector */
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 
 /* Body */
+
 body {
-    font-family: var(--body-font);
-    color: #222;
-    background-color: white;
+  font-family: var(--body-font);
+  color: #222;
+  background-color: white;
+  line-height: 1.5;
 }
 
+
 /* Main page width */
+
 header,
 main,
 footer {
-    width: 840px;
-    margin: 0 auto;
+  width: 840px;
+  margin: 0 auto;
 }
 
+
 /* Header */
+
 header {
-    display: grid;
-    grid-template-columns: 180px 1fr;
-    align-items: center;
-    padding: 10px;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: center;
+  padding: 10px;
 }
 
 header > img {
-    width: 150px;
-    height: auto;
+  width: 150px;
+  height: auto;
 }
 
+
 /* Navigation */
+
 nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 nav a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: bold;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
 }
 
 nav a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
+
 
 /* Headings */
+
 h1,
-h2 {
-    font-family: var(--heading-font);
-}
-
-h1 {
-    color: white;
+h2,
+h3 {
+  font-family: var(--heading-font);
 }
 
 h2 {
-    color: white;
-    background-color: var(--primary-color);
-    text-align: center;
-    padding: 15px;
-    margin-bottom: 15px;
+  color: white;
+  background-color: var(--primary-color);
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 15px;
 }
 
-/* Hero */
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
 .hero {
-    position: relative;
-    margin-top: 10px;
+  position: relative;
+  margin-top: 10px;
 }
 
 .hero > img {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-/* Hero title */
+
+/* Hero heading */
+
 .hero h1 {
-    position: absolute;
-    top: 45px;
-    left: 0;
-    width: 100%;
-    padding: 12px;
-    text-align: center;
-    background-color: rgb(31 59 109 / 90%);
-    font-size: 2rem;
+  color: white;
+  margin: 0;
 }
 
-/* Hero article */
+
+/* Existing About hero title */
+
+.hero:not(.home-hero) h1 {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  background-color: rgb(31 59 109 / 90%);
+  font-size: 2rem;
+}
+
+
+/* Home hero */
+
+.home-hero {
+  margin-top: 10px;
+}
+
+.home-hero .hero-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 35px;
+  padding: 25px;
+  text-align: center;
+  background-color: rgb(31 59 109 / 90%);
+  color: white;
+}
+
+.home-hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.home-hero p {
+  max-width: 650px;
+  margin: 0 auto 18px;
+  color: white;
+  font-size: 1.05rem;
+}
+
+
+/* Existing About hero article */
+
 .hero article {
-    position: absolute;
-    bottom: 40px;
-    left: 25px;
-    right: 25px;
-    padding: 15px;
-    background-color: rgb(31 59 109 / 90%);
-    color: white;
+  position: absolute;
+  bottom: 40px;
+  left: 25px;
+  right: 25px;
+  padding: 15px;
+  background-color: rgb(31 59 109 / 90%);
+  color: white;
 }
 
-/* Small image inside article */
 .hero article img {
-    float: right;
-    width: 125px;
-    height: auto;
-    margin-left: 15px;
+  float: right;
+  width: 125px;
+  height: auto;
+  margin-left: 15px;
 }
 
-/* Article paragraph */
 .hero article p {
-    color: white;
-    line-height: 1.4;
+  color: white;
+  line-height: 1.4;
 }
 
-/* Sections */
-section {
-    margin-top: 25px;
-    margin-bottom: 25px;
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
 }
+
+.cta-button:hover {
+  text-decoration: underline;
+}
+
+.hero-button {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+   ========================================================= */
+
+section {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   HOME PAGE
+   ========================================================= */
+
+
+/* Purpose and offerings */
+
+.home-offerings {
+  margin-top: 35px;
+}
+
+.offering-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.offering-card {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+}
+
+.offering-card img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.offering-content {
+  padding: 20px;
+}
+
+.offering-content h3 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.offering-content p {
+  line-height: 1.6;
+}
+
+
+/* Newsletter */
+
+.newsletter {
+  padding: 30px;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.newsletter > p {
+  max-width: 650px;
+  margin: 0 auto 25px;
+}
+
+.newsletter-form {
+  max-width: 550px;
+  margin: 0 auto;
+  display: grid;
+  gap: 15px;
+}
+
+.form-field {
+  display: grid;
+  gap: 5px;
+  text-align: left;
+}
+
+.form-field label {
+  font-weight: bold;
+}
+
+.form-field input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #999;
+  font-size: 1rem;
+}
+
+.newsletter-form button {
+  justify-self: center;
+  padding: 12px 25px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.newsletter-form button:hover {
+  text-decoration: underline;
+}
+
+
+/* Home CTA */
+
+.home-cta {
+  text-align: center;
+  padding: 35px 20px;
+}
+
+.home-cta h2 {
+  margin-bottom: 15px;
+}
+
+.home-cta p {
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   ABOUT PAGE
+   ========================================================= */
+
 
 /* History */
+
 .history-content {
-    display: grid;
-    grid-template-columns: 1fr 200px 1fr;
-    gap: 20px;
-    align-items: center;
-    padding: 0 15px;
+  display: grid;
+  grid-template-columns: 1fr 200px 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 0 15px;
 }
 
 .history-content p {
-    line-height: 1.5;
+  line-height: 1.5;
 }
 
 .history-content img {
-    width: 200px;
-    height: 150px;
-    object-fit: cover;
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
 }
 
+
 /* Adventures */
+
 .adventure-gallery {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
 }
 
 .adventure-gallery figure {
-    margin: 0;
-    text-align: center;
+  margin: 0;
+  text-align: center;
 }
 
 .adventure-gallery img {
-    display: block;
-    width: 100%;
-    height: 110px;
-    object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
 }
 
 .adventure-gallery figcaption {
-    padding: 8px 2px;
-    font-weight: bold;
-    font-size: 0.85rem;
-}
-
-/* Footer */
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid #ccc;
-    margin-top: 30px;
-    padding: 15px;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Social media */
-.socialmedia {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 15px;
-}
-
-.socialmedia a {
-    text-decoration: none;
-}
-
-.socialmedia img {
-    width: 40px;
-    height: 40px;
-}
-
-/* Responsive */
-@media screen and (max-width: 840px) {
-
-    header,
-    main,
-    footer {
-        width: 100%;
-    }
-
-    header {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    header > img {
-        margin: 0 auto 10px;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    .hero article {
-        position: static;
-    }
-
-    .hero h1 {
-        position: static;
-    }
-
-    .history-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .history-content img {
-        width: 100%;
-        height: auto;
-    }
-
-    .adventure-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    footer {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
+  padding: 8px 2px;
+  font-weight: bold;
+  font-size: 0.85rem;
 }
 
 
+/* =========================================================
+   CONTACT PAGE
+   ========================================================= */
 
-
-/* CONTACT STYLES */
 .contact-intro {
-    text-align: center;
-    padding: 2rem;
+  text-align: center;
+  padding: 2rem;
 }
 
 .contact-intro h1 {
-    margin-bottom: 1rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
 }
 
 .contact-information {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 .company-info,
 .map {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .company-info address {
-    line-height: 1.8;
+  line-height: 1.8;
 }
 
 .company-info a {
-    color: inherit;
+  color: inherit;
 }
 
 .map iframe {
-    width: 100%;
-    min-height: 250px;
-    border: none;
+  width: 100%;
+  min-height: 250px;
+  border: none;
 }
 
 .employees {
-    text-align: center;
-    padding: 2rem;
+  text-align: center;
+  padding: 2rem;
 }
 
 .employee-gallery {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .employee-gallery figure {
-    width: 200px;
-    margin: 0;
+  width: 200px;
+  margin: 0;
 }
 
 .employee-gallery img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 .employee-gallery figcaption {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .contact-form-section {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 .contact-form-section h2 {
-    text-align: center;
+  text-align: center;
 }
 
 form {
-    display: grid;
-    gap: 1rem;
+  display: grid;
+  gap: 1rem;
 }
 
 fieldset {
-    display: grid;
-    gap: 0.75rem;
-    padding: 1.5rem;
+  display: grid;
+  gap: 0.75rem;
+  padding: 1.5rem;
 }
 
 legend {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
-    width: 100%;
-    padding: 0.75rem;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 0.75rem;
+  box-sizing: border-box;
 }
 
 input[type="radio"],
 input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .checkbox-label {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 button[type="submit"] {
-    padding: 0.9rem 1.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* RESPONSIVE DESIGN */
-@media (max-width: 700px) {
-    .contact-information {
-        grid-template-columns: 1fr;
-    }
-
-    .employee-gallery {
-        flex-direction: column;
-        align-items: center;
-    }
+  padding: 0.9rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 
-
-/* ================================
-TRIPS PAGE
-================================ */
+/* =========================================================
+   TRIPS PAGE
+   ========================================================= */
 
 .trips-intro {
-text-align: center;
-padding: 30px 20px;
+  text-align: center;
+  padding: 30px 20px;
 }
 
 .trips-intro h1 {
-background-color: var(--primary-color);
-color: white;
-padding: 15px;
-margin-bottom: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px;
+  margin-bottom: 20px;
 }
 
 .trips-intro p {
-max-width: 700px;
-margin: 0 auto 15px;
-line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 15px;
+  line-height: 1.6;
 }
+
 
 /* Trip descriptions */
 
 .trip-descriptions {
-margin-top: 25px;
+  margin-top: 25px;
 }
 
 .trip-cards {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .trip-card {
-border: 1px solid #ccc;
-background-color: #f7f7f7;
-padding-bottom: 20px;
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+  padding-bottom: 20px;
 }
 
 .trip-card img {
-display: block;
-width: 100%;
-height: 180px;
-object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
 .trip-card h3 {
-color: var(--primary-color);
-font-family: var(--heading-font);
-font-size: 1.3rem;
-padding: 15px 15px 5px;
+  color: var(--primary-color);
+  font-family: var(--heading-font);
+  font-size: 1.3rem;
+  padding: 15px 15px 5px;
 }
 
 .trip-card p {
-padding: 0 15px;
-line-height: 1.5;
-margin-top: 10px;
+  padding: 0 15px;
+  line-height: 1.5;
+  margin-top: 10px;
 }
+
 
 /* Trips table */
 
 .trips-table-section {
-margin-top: 30px;
+  margin-top: 30px;
 }
 
 .table-container {
-overflow-x: auto;
+  overflow-x: auto;
 }
 
 table {
-width: 100%;
-border-collapse: collapse;
-margin-top: 10px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
 }
 
 caption {
-font-weight: bold;
-padding: 10px;
-caption-side: top;
+  font-weight: bold;
+  padding: 10px;
+  caption-side: top;
 }
 
 th,
 td {
-border: 1px solid #ccc;
-padding: 12px;
-text-align: center;
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
 }
 
 thead th {
-background-color: var(--primary-color);
-color: white;
+  background-color: var(--primary-color);
+  color: white;
 }
 
 tbody th {
-color: var(--primary-color);
-background-color: #f2f2f2;
+  color: var(--primary-color);
+  background-color: #f2f2f2;
 }
 
 tbody tr:nth-child(even) {
-background-color: #f8f8f8;
+  background-color: #f8f8f8;
 }
 
-/* Call to action */
+
+/* Trips call to action */
 
 .trips-cta {
-text-align: center;
-padding: 30px 20px;
-background-color: #f2f2f2;
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #f2f2f2;
 }
 
 .trips-cta p {
-margin-bottom: 20px;
-line-height: 1.5;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
-.cta-button {
-display: inline-block;
-background-color: var(--primary-color);
-color: white;
-padding: 12px 20px;
-text-decoration: none;
-font-weight: bold;
-border-radius: 4px;
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  margin-top: 30px;
+  padding: 15px;
 }
 
-.cta-button:hover {
-text-decoration: underline;
+footer p {
+  margin: 0;
 }
 
-/* Trips responsive design */
+
+/* Social media */
+
+.socialmedia {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+
+.socialmedia a {
+  text-decoration: none;
+}
+
+.socialmedia img {
+  width: 40px;
+  height: 40px;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media screen and (max-width: 840px) {
+
+  header,
+  main,
+  footer {
+    width: 100%;
+  }
+
+  header {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  header > img {
+    margin: 0 auto 10px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+
+  /* Home hero */
+
+  .home-hero .hero-content {
+    position: static;
+    background-color: var(--primary-color);
+  }
+
+  .home-hero h1 {
+    font-size: 2rem;
+  }
+
+
+  /* Existing hero */
+
+  .hero article {
+    position: static;
+  }
+
+  .hero:not(.home-hero) h1 {
+    position: static;
+    background-color: var(--primary-color);
+  }
+
+
+  /* Home Grid */
+
+  .offering-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* History */
+
+  .history-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .history-content img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  /* Adventures */
+
+  .adventure-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  /* Footer */
+
+  footer {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
+
 
 @media screen and (max-width: 700px) {
 
-
-.trip-cards {
+  .contact-information {
     grid-template-columns: 1fr;
-}
+  }
 
-.trip-card img {
+  .employee-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  /* Trips */
+
+  .trip-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .trip-card img {
     height: auto;
-}
+  }
 
-th,
-td {
+  th,
+  td {
     padding: 8px;
     font-size: 0.9rem;
-}
+  }
 
-.trips-intro {
+  .trips-intro {
     padding: 20px 10px;
-}
-
+  }
 }
